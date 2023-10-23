@@ -101,3 +101,40 @@ body {
     border-radius: 10px;
     border: 3px solid #0082fc;
 }
+
+#send-button, #user-input {
+    transition: all 0.3s ease-in-out;
+}
+
+#send-button:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* больше тени при наведении */
+}
+
+#user-input:focus {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* больше тени при фокусе */
+}
+
+#chat-box {
+    cursor: pointer;
+}
+
+.user-message, .bot-message {
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+#widget-header {
+    padding: 10px;
+    background-color: #004080; /* темнее фон */
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #002040; /* темнее разделитель */
+}
+
+.user-message {
+    margin-bottom: 10px; /* больше отступ снизу */
+}
+
+.bot-message {
+    margin-top: 10px; /* больше отступ сверху */
+}

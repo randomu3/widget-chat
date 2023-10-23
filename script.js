@@ -21,10 +21,10 @@ function sendMessage() {
 function getBotResponse(message) {
   const lowerCaseMessage = message.toLowerCase();
   if (lowerCaseMessage.includes('пенсия')) {
-    return 'Бот: Мы предлагаем различные пенсионные программы...';
+    return 'AI-Помощник: Мы предлагаем различные пенсионные программы...';
   } else if (lowerCaseMessage.includes('вклад')) {
-    return 'Бот: У нас есть множество вариантов вкладов...';
+    return 'AI-Помощник: У нас есть множество вариантов вкладов...';
   } else {
-    return 'Бот: Извините, я не понял ваш вопрос.';
+    return 'AI-Помощник: Извините, я не понял ваш вопрос.';
   }
 }
