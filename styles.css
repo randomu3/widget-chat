@@ -102,13 +102,11 @@ body {
 .user-message {
     background-color: #e0f7fa;
     color: #006064;
-    margin-bottom: 10px;
 }
 
 .bot-message {
     background-color: #b2ebf2;
     color: #004d40;
-    margin-top: 10px;
 }
 
 #widget-header {
