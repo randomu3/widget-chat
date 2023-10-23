@@ -9,9 +9,14 @@
 </head>
 
 <body>
-
-    <div id="widget-container">
-        <div id="widget-header">Чат-бот НПФ Сургутнефтегаз</div>
+    <button id="chat-button" onclick="toggleChat()">
+        <img src="https://npf-sng.ru/local/markup/dist/img/mail_send.svg" alt="Chat Icon">
+    </button>
+    <div id="widget-container" class="hidden">
+        <div id="widget-header">
+            Чат-бот НПФ Сургутнефтегаз
+            <span id="close-button" onclick="toggleChat()">×</span>
+        </div>
         <div id="chat-box"></div>
         <form id="input-form" onsubmit="sendMessage(); return false;">
             <input type="text" id="user-input" placeholder="Введите ваш вопрос...">
@@ -23,11 +28,10 @@
             <button onclick="quickResponse('Пенсия')">Пенсия</button>
             <button onclick="quickResponse('Вклад')">Вклад</button>
             <button onclick="quickResponse('Как открыть счет?')">Как открыть счет?</button>
-        </div> 
+        </div>
     </div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>

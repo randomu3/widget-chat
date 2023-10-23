@@ -36,3 +36,14 @@ function quickResponse(message) {
     appendMessage('Вы: ' + message, 'user-message');
     appendMessage(getBotResponse(message), 'bot-message');
 }
+
+function toggleChat() {
+    const widgetContainer = document.getElementById('widget-container');
+    if (widgetContainer.classList.contains('hidden')) {
+        widgetContainer.classList.remove('hidden');
+        widgetContainer.classList.add('visible');
+    } else {
+        widgetContainer.classList.remove('visible');
+        widgetContainer.classList.add('hidden');
+    }
+}

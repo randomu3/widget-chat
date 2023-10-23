@@ -143,3 +143,69 @@ body {
 #quick-responses button:hover {
     background-color: #002040;
 }
+
+#chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #004080;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#chat-button img {
+    width: 30px;
+    height: 30px;
+}
+
+#chat-button:hover {
+    background-color: #002040;
+}
+
+#widget-container.hidden {
+    display: none;
+}
+
+#widget-container.visible {
+    animation: slideUp 0.3s forwards;
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+#widget-container.hidden {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom right;
+}
+
+#widget-container.visible {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom right;
+}
+
+#close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    font-size: 1.5em;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+}
+
+#close-button:hover {
+    color: #cbcbcb;
+}
