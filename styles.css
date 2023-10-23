@@ -173,15 +173,6 @@ body {
     display: none;
 }
 
-#widget-container.visible {
-    animation: slideUp 0.3s forwards;
-}
-
-@keyframes slideUp {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(0); }
-}
-
 #widget-container.hidden {
     transform: scale(0);
     transition: transform 0.3s ease-in-out;
