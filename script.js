@@ -31,3 +31,8 @@ function getBotResponse(message) {
         return 'AI-Помощник: Извините, я не понял ваш вопрос.';
     }
 }
+
+function quickResponse(message) {
+    appendMessage('Вы: ' + message, 'user-message');
+    appendMessage(getBotResponse(message), 'bot-message');
+}

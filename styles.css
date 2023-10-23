@@ -123,3 +123,23 @@ body {
 #widget-header:hover {
     background-color: #002040;
 }
+
+#quick-responses {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#quick-responses button {
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#quick-responses button:hover {
+    background-color: #002040;
+}
