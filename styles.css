@@ -44,9 +44,11 @@ body {
 #send-button {
     background-color: #002040; 
     border: none;
+    display: flex;
+    align-items: center;
     border-radius: 10px;
     color: #fff;
-    cursor: pointer;
+    cursor: pointer;    
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* легкая тень для объемности */
 }
 
@@ -137,4 +139,25 @@ body {
 
 .bot-message {
     margin-top: 10px; /* больше отступ сверху */
+}
+
+#chat-box {
+    scroll-behavior: smooth;
+}
+#user-input {
+    cursor: text;
+}
+#widget-header {
+    transition: background-color 0.3s ease-in-out;
+}
+
+#widget-header:hover {
+    background-color: #002040;
+}
+.user-message, .bot-message {
+    padding: 12px;
+}
+#send-button img {
+    width: 20px;
+    height: 20px;
 }
