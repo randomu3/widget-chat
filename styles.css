@@ -172,11 +172,11 @@ body {
 }
 
 #widget-container.hidden {
-    transform: scale(0);
+    animation: collapse 0.5s forwards;
 }
 
 #widget-container.visible {
-    transform: scale(1);
+    animation: expand 0.5s forwards;
 }
 
 @keyframes slideUp {
@@ -198,4 +198,56 @@ body {
 
 #close-button:hover {
     color: #cbcbcb;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(0);
+        background-color: #004080;
+        opacity: 0;
+    }
+    70% {
+        background-color: #004080;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #0066cc;
+        opacity: 1;
+    }
+}
+
+@keyframes collapse {
+    0% {
+        transform: scale(1);
+        background-color: #0066cc;
+        opacity: 1;
+    }
+    70% {
+        background-color: #004080;
+    }
+    100% {
+        transform: scale(0);
+        background-color: #004080;
+        opacity: 0;
+    }
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #004080;
+    transition: opacity 0.3s ease-in-out 0.3s;  /* задержка в 0.3s */
+    opacity: 1;
+    pointer-events: none;  /* чтобы элемент был некликабельным */
+}
+
+#widget-container.hidden #overlay {
+    opacity: 1;
+}
+
+#widget-container.visible #overlay {
+    opacity: 0;
 }
