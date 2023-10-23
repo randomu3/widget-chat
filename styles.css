@@ -107,6 +107,7 @@ body {
 .bot-message {
     background-color: #b2ebf2;
     color: #004d40;
+    margin-bottom: 10px;
 }
 
 #widget-header {
