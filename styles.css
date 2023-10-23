@@ -199,3 +199,33 @@ body {
 #close-button:hover {
     color: #cbcbcb;
 }
+
+#scroll-button {
+    position: absolute;
+    bottom: 115px;
+    right: 25px;
+    background-color: #004080;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    transform: rotate(90deg);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#scroll-button img {
+    width: 20px;
+    height: 20px;
+}
+
+#scroll-button:hover {
+    background-color: #002040;
+}
+
+#scroll-button.hidden {
+    display: none;
+}

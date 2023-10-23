@@ -19,6 +19,14 @@ function appendMessage(text, className) {
     messageDiv.textContent = text;
     messageDiv.className = className;
     chatBox.appendChild(messageDiv);
+    
+    // Проверка, проскроллил ли пользователь чат вверх
+    const isScrolledToBottom = chatBox.scrollHeight - chatBox.clientHeight <= chatBox.scrollTop + 1;
+
+    // Если это так, прокрутите чат вниз
+    if (isScrolledToBottom) {
+        chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
+    }
 }
 
 function getBotResponse(message) {
@@ -47,3 +55,19 @@ function toggleChat() {
         widgetContainer.classList.add('hidden');
     }
 }
+
+function scrollToBottom() {
+    chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
+    document.getElementById('scroll-button').classList.add('hidden');
+}
+
+chatBox.addEventListener('scroll', () => {
+    const isScrolledToBottom = chatBox.scrollHeight - chatBox.clientHeight <= chatBox.scrollTop + 1;
+    const scrollButton = document.getElementById('scroll-button');
+    if (isScrolledToBottom) {
+        scrollButton.classList.add('hidden');
+    } else {
+        scrollButton.classList.remove('hidden');
+    }
+});
+
